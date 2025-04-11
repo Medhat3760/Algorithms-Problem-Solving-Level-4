@@ -10,7 +10,7 @@ This C# console application compares two dates and determines whether the first 
 
 ---
 
-## 📦 Program Structure
+##  Program Structure
 
 ### 1. `sDate` Struct
 
