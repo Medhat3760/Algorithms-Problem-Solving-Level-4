@@ -11,7 +11,6 @@ This C# console application calculates a person's age in **days** by comparing t
 - System retrieves the current date.
 - Calculates total days between the two dates.
 - Accounts for leap years and varying month lengths.
-
 ---
 
 ## Program Structure
