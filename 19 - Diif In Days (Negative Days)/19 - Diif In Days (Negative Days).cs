@@ -1,4 +1,4 @@
-﻿namespace _19___Diif_In_Days__Negative_Days_
+namespace _19___Diif_In_Days__Negative_Days_
 {
     internal class Program
     {
@@ -154,13 +154,13 @@
         {
 
             int days = 0;
-            short swapFalgValue = 1;
+            short swapFlagValue = 1;
 
             if (!IsDate1BeforeDate2(date1, date2))
             {
 
                 SwapDates(ref date1, ref date2);
-                swapFalgValue = -1;
+                swapFlagValue = -1;
 
             }
 
@@ -172,7 +172,7 @@
 
             }
 
-            return (includeEndDay) ? (++days * swapFalgValue) : (days * swapFalgValue);
+            return (includeEndDay) ? (++days * swapFlagValue) : (days * swapFlagValue);
 
         }
 
