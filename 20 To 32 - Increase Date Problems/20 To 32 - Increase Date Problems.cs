@@ -1,6 +1,6 @@
 namespace _20_To_32___Increase_Date_Problems
 {
-    internal class Program
+    shorternal class Program
     {
 
         struct stDate
@@ -124,10 +124,10 @@ namespace _20_To_32___Increase_Date_Problems
 
         }
 
-        static stDate IncreaseDateByXDays(stDate date, int days)
+        static stDate IncreaseDateByXDays(stDate date, short days)
         {
 
-            for (int i = 0; i < days; i++)
+            for (short i = 0; i < days; i++)
             {
                 date = IncreaseDateByOneDay(date);
             }
@@ -141,10 +141,10 @@ namespace _20_To_32___Increase_Date_Problems
             return IncreaseDateByXDays(date, 7);
         }
 
-        static stDate IncreaseDateByXWeeks(stDate date, int weeks)
+        static stDate IncreaseDateByXWeeks(stDate date, short weeks)
         {
 
-            for (int i = 0; i < weeks; i++)
+            for (short i = 0; i < weeks; i++)
             {
                 date = IncreaseDateByOneWeek(date);
             }
@@ -177,10 +177,10 @@ namespace _20_To_32___Increase_Date_Problems
 
         }
 
-        static stDate IncreaseDateByXMonths(stDate date, int months)
+        static stDate IncreaseDateByXMonths(stDate date, short months)
         {
 
-            for (int i = 0; i < months; i++)
+            for (short i = 0; i < months; i++)
             {
                 date = IncreaseDateByOneMonth(date);
             }
@@ -207,10 +207,10 @@ namespace _20_To_32___Increase_Date_Problems
 
         }
 
-        static stDate IncreaseDateByXYears(stDate date, int years)
+        static stDate IncreaseDateByXYears(stDate date, short years)
         {
 
-            for (int i = 0; i < years; i++)
+            for (short i = 0; i < years; i++)
             {
                 date = IncreaseDateByOneYear(date);
             }
