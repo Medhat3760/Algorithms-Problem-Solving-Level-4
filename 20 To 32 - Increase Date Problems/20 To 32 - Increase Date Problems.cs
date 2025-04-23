@@ -1,4 +1,4 @@
-﻿namespace _20_To_32___Increase_Date_Problems
+namespace _20_To_32___Increase_Date_Problems
 {
     internal class Program
     {
@@ -191,10 +191,20 @@
 
         static stDate IncreaseDateByOneYear(stDate date)
         {
-            //date.year++;
-            //return date;
 
-            return IncreaseDateByXMonths(date, 12);
+            //return IncreaseDateByXMonths(date, 12);
+
+            date.year++;
+
+            short numberOfDaysInCurrentMonth = NumberOfDaysInAMonth(date.month, date.year);
+
+            if (date.day > numberOfDaysInCurrentMonth)
+            {
+                date.day = numberOfDaysInCurrentMonth;
+            }
+
+            return date;
+
         }
 
         static stDate IncreaseDateByXYears(stDate date, int years)
