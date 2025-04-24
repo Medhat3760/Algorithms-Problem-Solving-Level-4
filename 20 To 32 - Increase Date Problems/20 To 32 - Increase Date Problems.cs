@@ -224,6 +224,13 @@ namespace _20_To_32___Increase_Date_Problems
 
             date.year += years;
 
+            short numberOfDaysInCurrentMonth = NumberOfDaysInAMonth(date.month, date.year);
+
+            if (date.day > numberOfDaysInCurrentMonth)
+            {
+                date.day = numberOfDaysInCurrentMonth;
+            }
+
             return date;
 
         }
@@ -231,6 +238,12 @@ namespace _20_To_32___Increase_Date_Problems
         static stDate IncreaseDateByOneDecade(stDate date)
         {
             //date.year += 10;
+            //short numberOfDaysInCurrentMonth = NumberOfDaysInAMonth(date.month, date.year);
+
+            //if (date.day > numberOfDaysInCurrentMonth)
+            //{
+            //    date.day = numberOfDaysInCurrentMonth;
+            //}
             //return date;
 
             return IncreaseDateByXYears(date, 10);
@@ -253,14 +266,26 @@ namespace _20_To_32___Increase_Date_Problems
 
             date.year += (short)(decades * 10);
 
+            short numberOfDaysInCurrentMonth = NumberOfDaysInAMonth(date.month, date.year);
+
+            if (date.day > numberOfDaysInCurrentMonth)
+            {
+                date.day = numberOfDaysInCurrentMonth;
+            }
+
             return date;
 
         }
 
         static stDate IncreaseDateByOneCentury(stDate date)
         {
-
             //date.year += 100;
+            //short numberOfDaysInCurrentMonth = NumberOfDaysInAMonth(date.month, date.year);
+
+            //if (date.day > numberOfDaysInCurrentMonth)
+            //{
+            //    date.day = numberOfDaysInCurrentMonth;
+            //}
             //return date;
 
             return IncreaseDateByXDecades(date, 10);
@@ -269,6 +294,12 @@ namespace _20_To_32___Increase_Date_Problems
         static stDate IncreaseDateByOneMillennium(stDate date)
         {
             //date.year += 1000;
+            //short numberOfDaysInCurrentMonth = NumberOfDaysInAMonth(date.month, date.year);
+
+            //if (date.day > numberOfDaysInCurrentMonth)
+            //{
+            //    date.day = numberOfDaysInCurrentMonth;
+            //}
             //return date;
 
             return IncreaseDateByXYears(date, 1000);
