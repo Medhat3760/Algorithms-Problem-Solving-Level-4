@@ -292,9 +292,9 @@ namespace _47_To_53___More_Date_Problems
 
             Console.WriteLine("\nVersion2:");
 
-            Console.WriteLine($"\nDays until end of month version 2 : {GetDaysUntilEndOfMonth_v2(date1)} Day(s)");
+            Console.WriteLine($"\nDays until end of month (version 2) : {GetDaysUntilEndOfMonth_v2(date1)} Day(s)");
 
-            Console.WriteLine($"\nDays until end of year version 2 : {GetDaysUntilEndOfYear_v2(date1)} Day(s)");
+            Console.WriteLine($"\nDays until end of year (version 2) : {GetDaysUntilEndOfYear_v2(date1)} Day(s)");
 
         }
     }
