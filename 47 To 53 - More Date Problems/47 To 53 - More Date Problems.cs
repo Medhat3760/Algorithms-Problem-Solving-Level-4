@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _47_To_53___More_Date_Problems
 {
@@ -140,13 +140,105 @@ namespace _47_To_53___More_Date_Problems
 
         }
 
-
         static short GetDaysUntilEndOfYear(stDate date)
         {
 
             short yearDays = (short)(IsLeapYear(date.year) ? 366 : 365);
 
             return (short)(yearDays - NumberOfDaysFromBeginningTheYear(date));
+
+        }
+
+        static bool IsDate1BeforeDate2(stDate date1, stDate date2)
+        {
+
+            if (date1.year != date2.year)
+            {
+                return date1.year < date2.year;
+            }
+
+            if (date1.month != date2.month)
+            {
+                return date1.month < date2.month;
+            }
+
+            return date1.day < date2.day;
+
+        }
+
+        static bool IsLastDayInMonth(stDate date)
+        {
+            return date.day == NumberOfDaysInAMonth(date.month, date.year);
+        }
+
+        static stDate IncreaseDateByOneDay(stDate date)
+        {
+
+            if (IsLastDayInMonth(date))
+            {
+
+                if (date.month == 12)
+                {
+                    date.year++;
+                    date.month = 1;
+                    date.day = 1;
+                }
+                else
+                {
+                    date.month++;
+                    date.day = 1;
+                }
+
+            }
+            else
+            {
+                date.day++;
+            }
+
+            return date;
+
+        }
+
+        static int GetDifferenceDays(stDate date1, stDate date2, bool includeEndDay = false)
+        {
+
+            int days = 0;
+
+            while (IsDate1BeforeDate2(date1, date2))
+            {
+
+                date1 = IncreaseDateByOneDay(date1);
+                days++;
+
+            }
+
+            return includeEndDay ? ++days : days;
+
+        }
+
+        static short GetDaysUntilEndOfMonth_v2(stDate date)
+        {
+
+            stDate endOfMonthDate;
+
+            endOfMonthDate.day = NumberOfDaysInAMonth(date.month, date.year);
+            endOfMonthDate.month = date.month;
+            endOfMonthDate.year = date.year;
+
+            return (short)GetDifferenceDays(date, endOfMonthDate);
+
+        }
+
+        static short GetDaysUntilEndOfYear_v2(stDate date)
+        {
+
+            stDate endYearDate;
+
+            endYearDate.day = 31;
+            endYearDate.month = 12;
+            endYearDate.year = date.year;
+
+            return (short)GetDifferenceDays(date, endYearDate);
 
         }
 
@@ -197,6 +289,12 @@ namespace _47_To_53___More_Date_Problems
             Console.WriteLine($"\nDays until end of month : {GetDaysUntilEndOfMonth(date1)} Day(s)");
 
             Console.WriteLine($"\nDays until end of year : {GetDaysUntilEndOfYear(date1)} Day(s)");
+
+            Console.WriteLine("\nVersion2:");
+
+            Console.WriteLine($"\nDays until end of month version 2 : {GetDaysUntilEndOfMonth_v2(date1)} Day(s)");
+
+            Console.WriteLine($"\nDays until end of year version 2 : {GetDaysUntilEndOfYear_v2(date1)} Day(s)");
 
         }
     }
