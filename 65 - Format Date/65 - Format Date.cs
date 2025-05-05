@@ -77,12 +77,14 @@ namespace _65___Format_Date
 
             while (pos != -1)
             {
-                //s = s.Replace(word, replaceTo);
+
                 s = s.Remove(pos, word.Length).Insert(pos, replaceTo);
 
                 pos = (short)s.IndexOf(word);
 
             }
+
+            //s = s.Replace(word, replaceTo);
 
             return s;
         }
