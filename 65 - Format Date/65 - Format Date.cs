@@ -1,4 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace _65___Format_Date
 {
@@ -77,14 +77,12 @@ namespace _65___Format_Date
 
             while (pos != -1)
             {
-
+                //s = s.Replace(word, replaceTo);
                 s = s.Remove(pos, word.Length).Insert(pos, replaceTo);
 
                 pos = (short)s.IndexOf(word);
 
             }
-
-            //text = text.Replace(word, replaceTo);
 
             return s;
         }
