@@ -90,7 +90,7 @@ namespace _65___Format_Date
         static string FormatDate(stDate date, string dateFormat = "dd/mm/yyyy")
         {
 
-            string formattedDateString = "";
+            string formattedDateString;
 
             formattedDateString = ReplaceWordInString(dateFormat, "dd", date.day.ToString());
             formattedDateString = ReplaceWordInString(formattedDateString, "mm", date.month.ToString());
